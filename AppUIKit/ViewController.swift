@@ -10,24 +10,34 @@ import UIKit
 class ViewController: UIViewController {
     
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var idTextField: UITextField!
     
-    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var passwordTextField: UITextField!
     
-
+    @IBOutlet weak var validateButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        idTextField.layer.borderWidth = 1
+        idTextField.layer.cornerRadius = 5
+        idTextField.layer.borderColor = UIColor.black.cgColor
+        idTextField.layer.borderWidth = 2
+        passwordTextField.layer.borderWidth = 1
+        passwordTextField.layer.cornerRadius = 5
+        passwordTextField.layer.borderWidth = 2
+        passwordTextField.layer.borderColor = UIColor.black.cgColor
+        passwordTextField.isSecureTextEntry = true
     }
     
     
     
     
+    @IBAction func ValidateButtonAction(_ sender: Any) {
+    }
     
     
-    @IBAction func button1Action(_ sender: Any) {
-        print("Coucou")
-        label.text = "coucou"
+    
+    @IBAction func CreateAccountAction(_ sender: Any) {
     }
     
 

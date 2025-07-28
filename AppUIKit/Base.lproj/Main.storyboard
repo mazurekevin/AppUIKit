@@ -16,43 +16,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1v-dK-duY">
-                                <rect key="frame" x="152.66666666666666" y="415.66666666666669" width="88" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LaBonnePlace" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdF-cA-q51">
+                                <rect key="frame" x="91.666666666666671" y="209" width="209.66666666666663" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agd-Ny-leo">
-                                <rect key="frame" x="159" y="536.66666666666663" width="75" height="35"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifiant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cdg-I6-YFT">
+                                <rect key="frame" x="30" y="399.66666666666669" width="333" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kWu-Sf-EzA">
+                                <rect key="frame" x="30" y="453.66666666666669" width="333" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5n-E2-Ab3">
+                                <rect key="frame" x="158.33333333333334" y="587.66666666666663" width="76.333333333333343" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Valider">
+                                    <color key="baseBackgroundColor" systemColor="viewFlipsideBackgroundColor"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="button1Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bdk-9G-D8s"/>
+                                    <action selector="ValidateButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vjf-mi-it2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3h-Ue-ovj">
+                                <rect key="frame" x="120.66666666666669" y="632.66666666666663" width="152" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Créer un compte"/>
+                                <connections>
+                                    <action selector="CreateAccountAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ovA-1u-B2t"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="agd-Ny-leo" firstAttribute="top" secondItem="K1v-dK-duY" secondAttribute="bottom" constant="100" id="Twj-lk-2zI"/>
-                            <constraint firstItem="agd-Ny-leo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WIX-pv-QsP"/>
-                            <constraint firstItem="K1v-dK-duY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cgc-c3-Rlg"/>
-                            <constraint firstItem="K1v-dK-duY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wgc-OM-J8U"/>
+                            <constraint firstItem="m3h-Ue-ovj" firstAttribute="top" secondItem="v5n-E2-Ab3" secondAttribute="bottom" constant="10" id="0gf-49-tVs"/>
+                            <constraint firstItem="Cdg-I6-YFT" firstAttribute="top" secondItem="DdF-cA-q51" secondAttribute="bottom" constant="150" id="2bt-M4-t9U"/>
+                            <constraint firstItem="v5n-E2-Ab3" firstAttribute="top" secondItem="kWu-Sf-EzA" secondAttribute="bottom" constant="100" id="Dit-d8-EUd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kWu-Sf-EzA" secondAttribute="trailing" constant="30" id="HqY-lH-IRM"/>
+                            <constraint firstItem="Cdg-I6-YFT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Lqi-xi-cAm"/>
+                            <constraint firstItem="DdF-cA-q51" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VYc-Zp-Rf5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cdg-I6-YFT" secondAttribute="trailing" constant="30" id="YWy-F9-q2E"/>
+                            <constraint firstItem="v5n-E2-Ab3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hR2-A2-Oky"/>
+                            <constraint firstItem="kWu-Sf-EzA" firstAttribute="top" secondItem="Cdg-I6-YFT" secondAttribute="bottom" constant="20" id="qA2-zA-HsT"/>
+                            <constraint firstItem="kWu-Sf-EzA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="sCI-80-0yh"/>
+                            <constraint firstItem="DdF-cA-q51" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="udH-Rk-Rkq"/>
+                            <constraint firstItem="m3h-Ue-ovj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wNu-M2-Mmg"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="button1" destination="agd-Ny-leo" id="rHG-sg-YPV"/>
-                        <outlet property="label" destination="K1v-dK-duY" id="Mcs-C5-CmJ"/>
+                        <outlet property="IdTextField" destination="Cdg-I6-YFT" id="iJ9-5I-nfU"/>
+                        <outlet property="PasswordTextField" destination="kWu-Sf-EzA" id="AP9-Lr-rV6"/>
+                        <outlet property="validateButton" destination="v5n-E2-Ab3" id="DIm-IE-Niy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="123" y="-2"/>
+            <point key="canvasLocation" x="122.90076335877862" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
