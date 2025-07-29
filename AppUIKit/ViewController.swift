@@ -33,6 +33,10 @@ class ViewController: UIViewController {
     
     
     @IBAction func ValidateButtonAction(_ sender: Any) {
+        let mainTabBarController = MainTabBarViewController()
+        let navigationController = UINavigationController(rootViewController: mainTabBarController)
+        navigationController.modalPresentationStyle = .fullScreen
+        self.present(navigationController, animated: true, completion: nil)
     }
     
     
